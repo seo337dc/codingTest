@@ -1,0 +1,40 @@
+1) 73
+- stack 0개 -> while x
+- stack push : [73]
+
+2) 74
+- stack 1개 / stack_top : 73 < 74 -> while o
+  - stack_top pop -> stack 0개
+  - while x
+- stack push : [74]
+
+3) 75
+- stack 1개 / stack_top : 74 < 75 -> while o
+  - stack_top pop -> stack 0개
+  - while x
+- stack push : [75]
+
+4) 71
+- stack 1개 / stack_top : 75 < 71 -> while x
+- stack push : [75,71]
+
+5) 69
+- stack 2개 / stack_top : 75 < 69 -> while x
+- stack push : [75,71,69]
+
+6) 72
+- stack 3개 / stack_top : 75 < 72 -> while x
+- stack push : [75,71,69,72]
+
+7) 76
+- stack 4개 / stack_top : 75 < 76 -> while 0
+  - stack_top(72) pop -> stack : [75,71,69]
+  - while o
+- stack 3개 / stack_top : 69 < 76 -> while o
+  - stack_top(69) pop -> stack : [75, 71]
+  - while o
+- stack 2개 / stack_pop : 71 < 76 -> while o
+  - stack_top(71) pop -> stack : [75]
+  - while o
+- stack 1개 / stack_pop : 75 < 76 -> while o
+  - stack_top(75) pop -> stack : [] -> while x
